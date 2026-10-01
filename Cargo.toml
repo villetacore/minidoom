@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = ["core", "desktop"]
+# rp2040 собирается отдельно под ARM (свой .cargo/config.toml)
+exclude = ["rp2040"]
+
+[profile.release]
+opt-level = 3
+lto = true

@@ -1,0 +1,9 @@
+[package]
+name = "minidoom-desktop"
+version = "0.1.0"
+edition = "2021"
+description = "Эмулятор экрана вейпа на ПК (Windows / Linux / macOS)"
+
+[dependencies]
+minidoom-core = { path = "../core" }
+minifb = "0.28"

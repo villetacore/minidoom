@@ -1,0 +1,19 @@
+[package]
+name = "minidoom-rp2040"
+version = "0.1.0"
+edition = "2021"
+description = "MiniDoom на Raspberry Pi Pico + экран SMOK Knight 80 (ST7735S 160x80, SPI)"
+
+[dependencies]
+minidoom-core = { path = "../core" }
+rp-pico = "0.9"
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+embedded-hal = "1.0"
+panic-halt = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = 2

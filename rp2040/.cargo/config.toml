@@ -1,0 +1,11 @@
+[build]
+target = "thumbv6m-none-eabi"
+
+[target.thumbv6m-none-eabi]
+# cargo run --release  ->  прошивка на Pico, зажатый BOOTSEL при подключении
+runner = "elf2uf2-rs -d"
+rustflags = [
+  "-C", "link-arg=--nmagic",
+  "-C", "link-arg=-Tlink.x",
+  "-C", "no-vectorize-loops",
+]
